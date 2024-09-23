@@ -43,9 +43,10 @@ def fetch_tweets_by_region(query, geocode, max_tweets=1000, lang='en'):
                     'User': tweet.user.screen_name,
                     'Tweet': tweet.full_text,
                     'Location': tweet.user.location,
-                    'Coordinates': tweet.coordinates,
+                    'Languages': tweet.language,
                     'Retweet_Count': tweet.retweet_count,
-                    'Favorite_Count': tweet.favorite_count
+                    'Favorite_Count': tweet.favorite_count,
+                    'Gender': tweet.gender,
                 }
                 tweets_data.append(tweet_data)
                 tweet_count += 1
